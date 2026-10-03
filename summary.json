@@ -1,0 +1,10 @@
+{
+  "mode": "scratch",
+  "val_acc_terbaik": 0.94,
+  "waktu_latih_detik": 77.6,
+  "epoch_val_acc_90": 7,
+  "parameter_dilatih": 11177538,
+  "device": "cpu",
+  "epochs": 10,
+  "batch_size": 16
+}
