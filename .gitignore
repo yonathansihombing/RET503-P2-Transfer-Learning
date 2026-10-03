@@ -1,0 +1,5 @@
+# bobot model (tiap file ~45 MB) - tidak perlu diupload
+*.pt
+# dibuat ulang oleh split.py
+dataset/
+__pycache__/
