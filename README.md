@@ -16,7 +16,7 @@ Membandingkan tiga pendekatan melatih ResNet-18 untuk mengenali dua objek dari f
 | mouse | 50 | 25 | 25 |
 | kotak_kacamata | 50 | 25 | 25 |
 
-- Kamera: kamera HP, resolusi asli 4160×3120, dikecilkan ke sisi terpanjang 1024 px.
+- Kamera: resolusi asli 4160×3120, dikecilkan ke sisi terpanjang 1024 px.
 - Sesi 1 diambil 19:52-20:00 dan sesi 2 diambil 20:26-20:32 pada 3 Oktober 2026. Sesi 2 dijadikan data validasi supaya train dan val tidak berisi foto yang diambil beruntun (slide 22, data leakage).
 - Variasi: jarak, posisi di citra, orientasi, bayangan dan sorotan cahaya, objek pengganggu (kabel, kunci), dan tangan. Latar selalu lantai yang sama.
 - `dataset_raw/metadata.csv` mencatat nama file, kelas, tanggal, kondisi cahaya, waktu, sesi, dan nama file asli.
