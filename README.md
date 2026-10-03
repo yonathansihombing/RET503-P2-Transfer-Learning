@@ -33,7 +33,13 @@ Pengaturan: 10 epoch, batch 16, Adam, CosineAnnealingLR, seed 42, CPU. Augmentas
 
 ## 4. Hipotesis
 
-Hipotesis dari materi praktikum (slide 21): mode feature dan partial akan jauh lebih baik daripada scratch pada data kecil, baik dari akurasi maupun kecepatan mencapai akurasi 90%. 
+Berdasarkan materi praktikum, saya memperkirakan bahwa pada data yang kecil (50 foto per kelas), mode transfer learning akan memberikan hasil yang lebih baik daripada melatih dari awal. Perkiraan saya:
+
+1. **Akurasi.** Mode *feature* dan *partial* akan mencapai akurasi validasi yang lebih tinggi daripada *scratch*, karena ResNet-18 dengan bobot ImageNet sudah mengenali tepi, tekstur, dan bentuk umum, sehingga hanya perlu menyesuaikan diri dengan dua objek ini.
+2. **Kecepatan belajar.** Mode *feature* dan *partial* akan mencapai akurasi validasi 90% dalam beberapa epoch pertama, sedangkan *scratch* membutuhkan lebih banyak epoch karena seluruh bobot harus dipelajari dari data yang sedikit.
+3. **Waktu latih.** Mode *feature* akan paling cepat karena hanya lapisan `fc` yang dilatih, dan *scratch* paling lama karena semua lapisan dilatih.
+
+Hipotesis dianggap tidak terbukti apabila *scratch* menyamai atau melampaui kedua mode transfer learning dalam akurasi dan jumlah epoch menuju 90%.
 
 ## 5. Hasil
 
