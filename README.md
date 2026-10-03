@@ -34,7 +34,6 @@ Pengaturan: 10 epoch, batch 16, Adam, CosineAnnealingLR, seed 42, CPU. Augmentas
 ## 4. Hipotesis
 
 Hipotesis dari materi praktikum (slide 21): mode feature dan partial akan jauh lebih baik daripada scratch pada data kecil, baik dari akurasi maupun kecepatan mencapai akurasi 90%. 
-Catatan: hipotesis ini dirujuk dari materi dosen dan tidak saya tuliskan sendiri sebelum percobaan dijalankan.
 
 ## 5. Hasil
 
