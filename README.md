@@ -16,7 +16,7 @@ Membandingkan tiga pendekatan melatih ResNet-18 untuk mengenali dua objek dari f
 | mouse | 50 | 25 | 25 |
 | kotak_kacamata | 50 | 25 | 25 |
 
-- Kamera: kamera HP, resolusi asli 4160×3120, dikecilkan ke sisi terpanjang 1024 px. **[ISI tipe HP]**
+- Kamera: kamera HP, resolusi asli 4160×3120, dikecilkan ke sisi terpanjang 1024 px.
 - Sesi 1 diambil 19:52-20:00 dan sesi 2 diambil 20:26-20:32 pada 3 Oktober 2026. Sesi 2 dijadikan data validasi supaya train dan val tidak berisi foto yang diambil beruntun (slide 22, data leakage).
 - Variasi: jarak, posisi di citra, orientasi, bayangan dan sorotan cahaya, objek pengganggu (kabel, kunci), dan tangan. Latar selalu lantai yang sama.
 - `dataset_raw/metadata.csv` mencatat nama file, kelas, tanggal, kondisi cahaya, waktu, sesi, dan nama file asli.
@@ -62,7 +62,7 @@ Preprocess (resize + normalisasi, 1 foto): 5,1 ms. Detail di `results/latensi.cs
 2. **Selisih akurasi kecil.** Val berisi 50 foto, jadi selisih 0,98 vs 1,00 hanya satu foto. Dari satu kali percobaan, feature dan partial tidak dapat dibedakan secara meyakinkan. Scratch lebih rendah (0,94) dan lebih tidak stabil: val loss sempat tinggi di epoch awal (35,4 pada epoch 1) dan akurasi val tertahan di 0,50 pada beberapa epoch pertama.
 3. **Tugas ini relatif mudah.** Kedua kelas berbeda jelas (mouse putih-biru, kotak kacamata hitam) dan latarnya sama. Akurasi val 100% pada mode partial sejak epoch awal tidak berarti model akan sempurna di lapangan (lihat bagian keterbatasan).
 4. **Latensi.** Keduanya memenuhi anggaran 67 ms per frame (15 FPS) pada laptop. ResNet-18 + preprocess sekitar 38 ms, MobileNetV3-Small + preprocess sekitar 16 ms. Anggaran lengkap juga mencakup akuisisi, ROS2, dan postprocess, serta harus diukur di komputer robot.
-5. **Pemilihan model:** **[ISI model pilihan kelompok dan alasan]**. Catatan: hanya ResNet-18 yang dilatih dan diuji akurasinya di praktikum ini. Akurasi MobileNetV3-Small belum diuji.
+
 
 ## 7. Keterbatasan
 
