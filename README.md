@@ -54,6 +54,8 @@ Grafik akurasi val per epoch: `results/akurasi_per_epoch.png`. Riwayat lengkap: 
 | MobileNetV3-Small | 2,54 | 10,7 | 13,7 | 93,6 |
 
 Preprocess (resize + normalisasi, 1 foto): 5,1 ms. Detail di `results/latensi.csv`.
+<img width="1050" height="600" alt="akurasi_per_epoch" src="https://github.com/user-attachments/assets/34208623-1401-411d-82e9-8447064ce166" />
+
 
 ## 6. Analisis
 
